@@ -1,0 +1,72 @@
+.home-header{
+    background-image: url('../../../assets/train-header1.jpg');
+    background-position: 30% 40%;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+.home-header h1{
+    color:white;
+    padding-top: 125px;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+
+.toolbar{
+    width: 100%;
+    background-color:black;
+    height: 40px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.toolbar ul{
+    display: block;
+    margin: 0px auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.toolbar ul li{
+    margin-left: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    display: block;
+    margin: 0px auto;
+    color:white;
+    line-height: 40px;
+    float: left;
+    width: 50%;
+    transition: all 300ms;
+    outline: 0;
+}   
+
+
+.toolbar ul li:hover{
+  
+    cursor: pointer;
+    color:lightgray;
+    transition: all 300ms;
+}   
+
+
+.toolbar ul li:active{
+    cursor: pointer;
+    color:darkgray;
+    transition: all 300ms;
+    box-shadow: 0px 0px 5px darkgray inset;
+    transition: all 100ms;
+
+}   
+
+
+
+/* On screens that are 900px or less, set the background color to olive */
+@media screen and (max-width: 900px) {
+    .home-header h1{
+        font-size: 32px;
+        letter-spacing: 10px;
+    }
+}

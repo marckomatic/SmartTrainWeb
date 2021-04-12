@@ -1,0 +1,10 @@
+version: "2"
+services:
+  front:
+    container_name: front-container
+    build:
+      dockerfile: DockerFile
+      context: ./
+    ports:
+      - "80:80"
+      

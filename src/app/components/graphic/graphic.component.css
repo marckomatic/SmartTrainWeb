@@ -1,0 +1,15 @@
+.seccion1{
+    margin-bottom: 20px;
+}
+
+.seccion1 p{
+    font-size: 0.9em;
+    line-height: 0.9em;
+}
+
+.my-chart-title{
+    margin-left: 15px;
+    margin-top: 40px;
+    font-size: 32px;
+}
+

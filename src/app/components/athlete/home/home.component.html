@@ -1,0 +1,44 @@
+
+<h1 id="titulo">Mi Rendimiento</h1>
+<p class="hour">{{today | date:'mediumTime'}}</p>
+
+<mat-card class="section">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image-2"></div>
+    <mat-card-title>Última sesion</mat-card-title>
+    <mat-card-subtitle>{{athleteName}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <div class="widget" id="widget" (click)="gotoLastSession()">
+    <h1>Mediciones</h1>
+    <p>Date: {{fechaUltimaSesion}}</p>
+  </div>
+
+</mat-card>
+
+<mat-card class="section2">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Historial</mat-card-title>
+    <mat-card-subtitle>Todas las sesiones</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel hideToggle *ngFor="let session of sessions">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Sesión {{session.idSesion}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{session.fecha_hora}}
+          <mat-icon>history_toggle_off</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <button class="metter-button" mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="seeData(session.idSesion)">
+        <mat-icon>visibility</mat-icon>
+      </button>
+    </mat-expansion-panel>
+  
+  </mat-accordion>
+</mat-card>

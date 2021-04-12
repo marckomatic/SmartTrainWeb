@@ -1,0 +1,44 @@
+#titulo {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.hour {
+    margin-left: 1rem;
+}
+
+.container {
+    width: 90%;
+    align-content: center;
+}
+
+.example-header-image {
+    background-image: url('https://img.icons8.com/ios/452/personal-trainer.png');
+    background-size: cover;
+}
+
+.example-header-image2 {
+    background-image: url('https://img.icons8.com/ios/452/woman-athlete.png');
+    background-size: cover;
+}
+
+/* Structure */
+
+table {
+    width: 100%;
+}
+
+#paginator {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.example-button-container button{
+    margin-left: 5px;
+}

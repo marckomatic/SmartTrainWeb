@@ -1,0 +1,42 @@
+<mat-card>
+  <h1>Rendimiento</h1>
+
+  <p>Atleta: {{infoUsuario.nombre}} {{infoUsuario.apellido}}
+    <br> Peso: {{infoUsuario.peso}} kg
+    <br> Altura: {{infoUsuario.estatura}} cm
+    <br> Sexo: {{infoUsuario.sexo}} <br>
+    <br> {{today | date:'mediumTime'}}
+
+  </p>
+
+</mat-card>
+
+<mat-card class="section2">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Sesiones</mat-card-title>
+    <mat-card-subtitle>Sesiones de entrenamiento</mat-card-subtitle>
+  </mat-card-header>
+
+
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel hideToggle *ngFor="let session of sessions">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Sesión {{session.idSesion}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{session.fecha_hora}}
+          <mat-icon>history_toggle_off</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <button class="metter-button" mat-fab color="accent" aria-label="Example icon button with a bookmark icon"
+        (click)="seeData(1, session.idSesion)">
+        <mat-icon>visibility</mat-icon>
+      </button>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</mat-card>

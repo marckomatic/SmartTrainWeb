@@ -1,0 +1,120 @@
+<mat-card class="seccion1">
+  <h1>Reportes</h1>
+  <p>Atleta: {{infoUsuario.nombre}} {{infoUsuario.apellido}}</p>
+  <p>Id. Sesión: {{idSesion}}</p>
+  <p>Fecha : {{fechaInicio}}</p>
+  <div>
+    <p> Velocidad Promedio: {{velocidadPromedio}} m/s</p>
+    <p> Velocidad Mínima: {{velocidadMinima}} m/s</p>
+    <p> Velocidad Máxima: {{velocidadMaxima}} m/s</p>
+  </div>
+</mat-card>
+
+
+<h2>Repeticiones</h2>
+
+<table style="width: 90%; margin: 0px auto; margin-top: 10px;" mat-table [dataSource]="dataRepeticiones"
+  class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="valor">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.valor}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fecha_hora">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.fecha_hora}} </td>
+  </ng-container>
+
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="distancia_repeticion">
+    <th mat-header-cell *matHeaderCellDef> Distance (m) </th>
+    <td mat-cell *matCellDef="let element"> {{element.distacia_repeticion}} </td>
+  </ng-container>
+  <!-- Weight Column -->
+
+  <ng-container matColumnDef="velocidad">
+    <th mat-header-cell *matHeaderCellDef> Vel. AVG(m/s) </th>
+    <td mat-cell *matCellDef="let element"> {{element.velocidad}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<h2>Rendiciones</h2>
+
+<table style="width: 90%; margin: 0px auto; margin-top: 10px;" mat-table [dataSource]="dataRendiciones"
+  class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.idSesion}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fecha_hora">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.fecha_hora}} </td>
+  </ng-container>
+
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="repeticion">
+    <th mat-header-cell *matHeaderCellDef> No. Repeticiones antes de la rendición </th>
+    <td mat-cell *matCellDef="let element"> {{element.repeticion}} </td>
+  </ng-container>
+  <!-- Weight Column -->
+
+
+  <tr mat-header-row *matHeaderRowDef="failsDisplayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: failsDisplayedColumns;"></tr>
+</table>
+
+
+<h2>Fallos</h2>
+
+<table style="width: 90%; margin: 0px auto; margin-top: 10px;" mat-table [dataSource]="dataFallos"
+  class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.idSesion}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fecha_hora">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.fecha_hora}} </td>
+  </ng-container>
+
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="repeticion">
+    <th mat-header-cell *matHeaderCellDef> No. Repeticiones antes del fallo </th>
+    <td mat-cell *matCellDef="let element"> {{element.repeticion}} </td>
+  </ng-container>
+  <!-- Weight Column -->
+
+
+  <tr mat-header-row *matHeaderRowDef="failsDisplayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: failsDisplayedColumns;"></tr>
+</table>
+

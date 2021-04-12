@@ -1,0 +1,113 @@
+<div class="fake-body">
+
+    <mat-card class="example-card">
+        <mat-card-header class="login-header">
+            <div class="header-container">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Registrarse</mat-card-title>
+            </div>
+
+        </mat-card-header>
+        <mat-card-content class="login-content">
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="Nombre" [(ngModel)]="nombre">
+                </mat-form-field>
+            </p>
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput placeholder="Apellido" [(ngModel)]="apellido">
+                </mat-form-field>
+            </p>
+
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nombre de Usuario</mat-label>
+                    <input matInput placeholder="Nombre de usuario" [(ngModel)]="usuario">
+                </mat-form-field>
+            </p>
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Edad</mat-label>
+                    <input matInput type="number" placeholder="Edad" min="12" [(ngModel)]="edad">
+                </mat-form-field>
+            </p>
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput placeholder="Contraseña" type="password" [(ngModel)]="password">
+                </mat-form-field>
+            </p>
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Repetir Contraseña</mat-label>
+                    <input matInput placeholder="Repetir Contraseña" type="password" [(ngModel)]="validarPassword">
+                </mat-form-field>
+            </p>
+
+
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Altura</mat-label>
+                    <input matInput placeholder="Altura (cm)" type="number" min="0" [(ngModel)]="estatura">
+                </mat-form-field>
+            </p>
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Peso</mat-label>
+                    <input matInput type="number" placeholder="Peso (kg)" min="0" [(ngModel)]="peso">
+                </mat-form-field>
+            </p>
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Sexo</mat-label>
+                    <mat-select name="food" [(ngModel)]="sexo">
+                        <mat-option [value]="'Masculino'">
+                            Hombre
+                        </mat-option>
+                        <mat-option [value]="'Femenino'">
+                            Mujer
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+
+
+
+            <p class="input-container">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Rol</mat-label>
+                    <mat-select name="food" [(ngModel)]="rol">
+                        <mat-option [value]=1>
+                            Coach
+                        </mat-option>
+                        <mat-option [value]=2>
+                            Atleta
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+
+
+        </mat-card-content>
+
+        <div class="clear-fix">
+
+        </div>
+
+        <mat-card-actions class="login-actions">
+            <button mat-button (click)="register()" color="primary">Registrarse</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>
