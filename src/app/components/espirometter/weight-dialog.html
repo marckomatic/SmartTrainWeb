@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Cambiar mi Peso</h1>
+<div mat-dialog-content>
+  <p>Ingrese su peso</p>
+  <mat-form-field>
+    <mat-label>Peso (Kg)</mat-label>
+    <input matInput [(ngModel)]="data.weight" type="number">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data.weight" cdkFocusInitial>Ok</button>
+</div>

@@ -14,6 +14,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar"
 import { MatTableModule } from "@angular/material/table"
 import { MatExpansionModule } from "@angular/material/expansion"
 import { MatPaginatorModule } from "@angular/material/paginator"
+import { MatDialogModule } from "@angular/material/dialog"
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MatPaginatorModule } from "@angular/material/paginator"
     MatSnackBarModule,
     MatExpansionModule,
     MatTableModule, 
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }

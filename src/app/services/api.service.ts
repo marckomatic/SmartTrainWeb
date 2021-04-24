@@ -45,6 +45,12 @@ export class ApiService {
   }
 
   
+  obtenerSesionesPorTipo(idAtleta:number, tipo:number){
+    return this.http.post(`${this.API_URL}/getSesionesPorTipo`, {idUsuario: idAtleta, tipo: tipo})
+  }
+
+
+  
   obtenerSesionesConRendiciones(idAtleta:number){
     return this.http.post(`${this.API_URL}/obtenerRendiciones`, {idAtleta: idAtleta})
   }
@@ -57,6 +63,7 @@ export class ApiService {
 
   
   obtenerDatos(idAtleta:number, medida: number, idSesion: number){
+    console.log(idSesion);
     return this.http.post(`${this.API_URL}/obtenerMedicionesPorSesion`, {idSesion: idSesion});
   }
 
@@ -77,5 +84,9 @@ export class ApiService {
     console.log("Este es el body");
     console.log({idAtleta: idAtleta})
     return this.http.post(`${this.API_URL}/obtenerFallos`, {idAtleta: idAtleta})
+  }
+
+  cambiarPeso(pesoAtleta, idAtleta){
+    return this.http.post(`${this.API_URL}/setPesoAtleta`, {idAtleta: idAtleta, peso: pesoAtleta})
   }
 }

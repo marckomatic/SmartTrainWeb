@@ -3,15 +3,24 @@
 <p class="hour">{{today | date:'mediumTime'}}</p>
 
 <mat-card class="section">
-  <mat-card-header>
+  <mat-card-header class="section-header">
     <div mat-card-avatar class="example-header-image-2"></div>
     <mat-card-title>Última sesion</mat-card-title>
     <mat-card-subtitle>{{athleteName}}</mat-card-subtitle>
   </mat-card-header>
 
-  <div class="widget" id="widget" (click)="gotoLastSession()">
-    <h1>Mediciones</h1>
-    <p>Date: {{fechaUltimaSesion}}</p>
+  <div class="widget" id="widget-1" (click)="gotoTypeSessions(1)">
+    <h1>Sesión normal</h1>
+  </div>
+
+  
+  <div class="widget" id="widget-2" (click)="gotoTypeSessions(2)">
+    <h1>Test Course Navette</h1>
+  </div>
+
+  
+  <div class="widget" id="widget-3"  (click)="gotoTypeSessions(3)">
+    <h1>Espirometría</h1>
   </div>
 
 </mat-card>
@@ -27,7 +36,7 @@
     <mat-expansion-panel hideToggle *ngFor="let session of sessions">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Sesión {{session.idSesion}}
+          Sesión {{session.idSesion}}: {{session.nombreTipo}}
         </mat-panel-title>
         <mat-panel-description>
           {{session.fecha_hora}}
@@ -35,7 +44,7 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
   
-      <button class="metter-button" mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="seeData(session.idSesion)">
+      <button class="metter-button" mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="seeData(session.idSesion, session.tipo)">
         <mat-icon>visibility</mat-icon>
       </button>
     </mat-expansion-panel>

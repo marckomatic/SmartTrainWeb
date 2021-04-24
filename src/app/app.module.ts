@@ -19,6 +19,10 @@ import { GraphicComponent } from './components/graphic/graphic.component';
 import { ChartsModule } from 'ng2-charts';
 import { SessionsComponent } from './components/sessions/sessions.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { EspirometterComponent } from './components/espirometter/espirometter.component';
+import { WeightDialog }from './components/espirometter/espirometter.component';
+import { GaugeChartModule } from 'angular-gauge-chart';
+import { SpirometterReportComponent } from './components/spirometter-report/spirometter-report.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { ReportsComponent } from './components/reports/reports.component';
     HomecoachComponent,
     GraphicComponent,
     SessionsComponent,
-    ReportsComponent
+    ReportsComponent,
+    EspirometterComponent,
+    WeightDialog,
+    SpirometterReportComponent
     ],
   imports: [
     BrowserModule,
@@ -42,7 +49,8 @@ import { ReportsComponent } from './components/reports/reports.component';
     MaterialModule,
     FormsModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule, 
+    GaugeChartModule
     
   ],
   providers: [],

@@ -16,6 +16,8 @@ import { HomecoachComponent } from './components/trainer/homecoach/homecoach.com
 import { GraphicComponent } from './components/graphic/graphic.component';
 import { SessionsComponent } from './components/sessions/sessions.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { EspirometterComponent } from './components/espirometter/espirometter.component';
+import { SpirometterReportComponent } from './components/spirometter-report/spirometter-report.component';
 
 const routes: Routes = [
   { 
@@ -48,7 +50,7 @@ const routes: Routes = [
         path: 'home', component: HomecoachComponent
       },
       {
-        path: 'sessions/:idAtleta', component: SessionsComponent
+        path: 'sessions/:idAtleta/:tipo', component: SessionsComponent
       },
       
       {
@@ -56,6 +58,12 @@ const routes: Routes = [
       }, 
       {
         path: "reports/:idSesion/:idAtleta", component: ReportsComponent
+      },
+      {
+        path: "spiro/:idSesion/:idAtleta", component: EspirometterComponent
+      },
+      {
+        path: "spiroReport/:idSesion/:idAtleta", component: SpirometterReportComponent
       }
     ]
   },
@@ -79,6 +87,15 @@ const routes: Routes = [
       }, 
       {
         path: "reports/:idSesion/:idAtleta", component: ReportsComponent
+      }, 
+      {
+        path: 'sessions/:idAtleta/:tipo', component: SessionsComponent
+      },
+      {
+        path: "spiro/:idSesion/:idAtleta", component: EspirometterComponent
+      },
+      {
+        path: "spiroReport/:idSesion/:idAtleta", component: SpirometterReportComponent
       }
     ]
   },

@@ -1,0 +1,53 @@
+<mat-card class="section">
+    <mat-card-header class="section-header">
+        <mat-card-title>
+            Espirómetro
+        </mat-card-title>
+        <mat-card-subtitle>
+            Monitoreo en tiempo real del volumen de oxigeno.
+        </mat-card-subtitle>
+
+    </mat-card-header>
+    <div>
+        <p>
+            <b>Atleta:</b> {{infoUsuario.nombre}} {{infoUsuario.apellido}}
+            <br> <b>Peso:</b> {{infoUsuario.peso}} kg
+            <br> <b>Altura:</b> {{infoUsuario.estatura}} cm
+            <br> <b>Sexo:</b> {{infoUsuario.sexo}}
+            <br> <b>Fecha de Sesión: </b> {{fechaInicio | date:'medium'}}
+        </p>
+    </div>
+
+</mat-card>
+
+<mat-card class="section">
+    <mat-card-header class="section-header">
+        <mat-card-title>
+            Reportes
+        </mat-card-title>
+        <mat-card-subtitle>
+            Espirometría completa
+        </mat-card-subtitle>
+
+    </mat-card-header>
+    <div>
+        <p>
+            <b>Volumen Máximo Exhalado:</b> {{volMaxExhalado}} Litros
+            <br> <b>Volumen Mínimo Exhalado:</b> {{volMinExhalado}} Litros
+            <br> <b>Volumen Máximo Inhalado:</b> {{volMaxInhalado}} Litros 
+            <br> <b>Volumen Mínimo Inhalado:</b> {{volMinInhalado}} Litros 
+            <br> <b>Promedio de Volumen Exhalado:</b> {{promVolInhalado}} Litros 
+            <br> <b>Promedio de Volumen Inhalado:</b> {{promVolExhalado}} Litros 
+            <br> <b>Vo2 Max:</b> {{vo2max}} ml/Kg/min
+        </p>
+    </div>
+
+</mat-card>
+
+
+<h1 class="my-chart-title">Volumen de Oxigeno en el Espirómetro</h1>
+
+<div class="chart-container" style="display: block; width: 90%; max-height: 100px; margin: 0px auto; ">
+    <canvas baseChart [datasets]="oxygenLineChartData" [labels]="oxygenLineChartLabels" [options]="lineChartOptions"
+        [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
+</div>

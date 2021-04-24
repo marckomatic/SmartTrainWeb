@@ -1,13 +1,20 @@
-<mat-card>
-  <h1>Rendimiento</h1>
+<mat-card id="cabecera-mat">
+  <div class="mat-header">
+    <h1>{{nombreTipo}}</h1>
+  </div>
 
-  <p>Atleta: {{infoUsuario.nombre}} {{infoUsuario.apellido}}
-    <br> Peso: {{infoUsuario.peso}} kg
-    <br> Altura: {{infoUsuario.estatura}} cm
-    <br> Sexo: {{infoUsuario.sexo}} <br>
-    <br> {{today | date:'mediumTime'}}
-
-  </p>
+  <div>
+    <p>
+      <b>Atleta:</b> {{infoUsuario.nombre}} {{infoUsuario.apellido}}
+      <br> <b>Peso:</b> {{infoUsuario.peso}} kg
+      <br> <b>Altura:</b> {{infoUsuario.estatura}} cm
+      <br> <b>Sexo:</b> {{infoUsuario.sexo}} <br> 
+      <br> <b>Fecha:</b> {{today | date:'mediumTime'}}
+    </p>
+  </div>
+  <div>
+    <img [src]="imageUrl" height="219px" />
+  </div>
 
 </mat-card>
 
@@ -15,7 +22,6 @@
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Sesiones</mat-card-title>
-    <mat-card-subtitle>Sesiones de entrenamiento</mat-card-subtitle>
   </mat-card-header>
 
 

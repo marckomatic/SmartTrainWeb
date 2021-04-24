@@ -1,0 +1,39 @@
+<mat-card class="section">
+    <mat-card-header class="section-header">
+        <mat-card-title>
+            Espirómetro
+        </mat-card-title>
+        <mat-card-subtitle>
+            Monitoreo en tiempo real del volumen de oxigeno.
+        </mat-card-subtitle>
+
+    </mat-card-header>
+    <div>
+        <p>
+            <b>Atleta:</b> {{infoUsuario.nombre}} {{infoUsuario.apellido}}
+            <br> <b>Peso:</b> {{infoUsuario.peso}} kg
+            <br> <b>Altura:</b> {{infoUsuario.estatura}} cm
+            <br> <b>Sexo:</b> {{infoUsuario.sexo}}
+            <br>
+            <br> <b>Fecha Inicio Sesión: </b> {{fechaInicio | date: 'mediumTime'}} 
+            <br> <b>Tiempo de sesión:</b> {{elapsedTime | date:'mm:ss' }}
+            <br>
+            <br> <b>Hora Actual:</b> {{today | date:'mediumTime'}}
+            <br> <button mat-raised-button color="primary" class="header-button" (click)="openWeightDialog()">Cambiar mi
+                Peso</button>
+            <button mat-raised-button color="primary" class="header-button" (click)="seeReport()">Ver Reporte</button>
+        </p>
+    </div>
+
+    <div>
+        <rg-gauge-chart [canvasWidth]="canvasWidth" [needleValue]="needleValue" [centralLabel]="centralLabel"
+            [options]="options" [name]="name" [bottomLabel]="bottomLabel"></rg-gauge-chart>
+    </div>
+</mat-card>
+
+<h1 class="my-chart-title">Volumen de Oxigeno en el Espirómetro</h1>
+
+<div class="chart-container" style="display: block; width: 90%; max-height: 100px; margin: 0px auto; ">
+    <canvas baseChart [datasets]="oxygenLineChartData" [labels]="oxygenLineChartLabels" [options]="lineChartOptions"
+        [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
+</div>

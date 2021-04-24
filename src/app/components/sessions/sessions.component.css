@@ -1,102 +1,134 @@
-
 .example-header-image {
-    background-image: url('https://thumb9.shutterstock.com/mosaic_250/171249574/740148886/stock-vector-time-icon-fast-time-vector-icon-deadline-icon-740148886.jpg');
-    background-size: cover;
-  }
+  background-image: url('https://thumb9.shutterstock.com/mosaic_250/171249574/740148886/stock-vector-time-icon-fast-time-vector-icon-deadline-icon-740148886.jpg');
+  background-size: cover;
+}
 
-  #titulo {
-    font-size: 2.5rem;
-    margin-left: 1rem;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
+#cabecera-mat{
+  margin: 0px auto; 
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.mat-header{
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.mat-header h1{
+  font-size: 48px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#cabecera-mat div p{
+  font-size: 18px;
+}
+
+#cabecera-mat img{
+  border-radius: 10px;
+}
+
+#titulo {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  min-height: 200px;
+  max-height: 400px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.section2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 0px auto;
   
-  .section {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
-    min-height: 200px;
-    max-height: 400px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-  
-  .section2 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-  
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.widget {
+  display: block;
+  margin: 0px auto;
+  width: 30%;
+  float: left;
+  height: 150px;
+  margin-left: 2.5%;
+  color: white;
+  text-align: left;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: all 300ms;
+}
+
+.widget:hover {
+  opacity: 1;
+  border: 5px solid #673AB7;
+  cursor: pointer;
+}
+
+.widget:active {
+  opacity: 1;
+  border: 5px solid #673AB7;
+  box-shadow: 3px 3px 3px black;
+}
+
+.widget h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20%;
+  margin-left: 3%;
+  margin-bottom: 0em;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.widget p {
+  margin-left: 3%;
+  margin-bottom: 1%;
+}
+
+/*CSS PARA EL ACORDIÓN*/
+
+.example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
+
+.metter-button {
+  margin-left: 10px;
+}
+
+/* On screens that are 900px or less*/
+
+@media screen and (max-width: 700px) {
   .widget {
-    display: block;
-    margin: 0px auto;
-    width: 30%;
-    float: left;
-    height: 150px;
-    margin-left: 2.5%;
-    color: white;
-    text-align: left;
-    border-radius: 5px;
-    opacity: 0.8;
-    transition: all 300ms;
+    width: 95%;
+    margin-bottom: 8px;
   }
-  
-  .widget:hover {
-    opacity: 1;
-    border: 5px solid #673AB7;
-    cursor: pointer;
+  .section {
+    min-height: 520px;
   }
-  
-  .widget:active {
-    opacity: 1;
-    border: 5px solid #673AB7;
-    box-shadow: 3px 3px 3px black;
-  }
-  
-  .widget h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 20%;
-    margin-left: 3%;
-    margin-bottom: 0em;
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-  
-  .widget p {
-    margin-left: 3%;
-    margin-bottom: 1%;
-  }
-  
-  /*CSS PARA EL ACORDIÓN*/
-  
-  .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description {
-    flex-basis: 0;
-  }
-  
-  .example-headers-align .mat-expansion-panel-header-description {
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .example-headers-align .mat-form-field+.mat-form-field {
-    margin-left: 8px;
-  }
-  
-  .metter-button {
-    margin-left: 10px;
-  }
-  
-  /* On screens that are 900px or less*/
-  
-  @media screen and (max-width: 700px) {
-    .widget {
-      width: 95%;
-      margin-bottom: 8px;
-    }
-    .section {
-      min-height: 520px;
-    }
-  }
+}
