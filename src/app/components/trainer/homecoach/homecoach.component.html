@@ -30,15 +30,21 @@
     </ng-container>
 
     <ng-container matColumnDef="detalles">
-      <th mat-header-cell *matHeaderCellDef> Opciones </th>
+      <th mat-header-cell *matHeaderCellDef> Sesiones </th>
       <td mat-cell *matCellDef="let element"> 
         <div class="example-button-container">
 
-          <button mat-mini-fab color="accent" aria-label="Ver"  matTooltip='Ver' (click)="seeSessions(element.idUsuario)">
-            <mat-icon>visibility</mat-icon>
+          <button mat-fab  color="accent" aria-label="Ver"  matTooltip='Ver' (click)="seeSessions(element.idUsuario, 1)">
+            Normal
           </button>    
+          <button mat-fab  color="accent" aria-label="Ver"  matTooltip='Ver' (click)="seeSessions(element.idUsuario, 2)">
+            TCN
+          </button> 
+          <button mat-fab  color="accent" aria-label="Ver"  matTooltip='Ver' (click)="seeSessions(element.idUsuario, 3)">
+            Espiro
+          </button>       
           
-          <button mat-mini-fab color="accent" aria-label="Desasignar"  matTooltip='Desasignar' (click)="deleteAthlete(element.idUsuario)">
+          <button mat-fab  color="accent" aria-label="Desasignar"  matTooltip='Desasignar' (click)="deleteAthlete(element.idUsuario)">
             <mat-icon>delete</mat-icon>
           </button>     
         </div>

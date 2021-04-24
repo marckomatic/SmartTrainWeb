@@ -136,9 +136,9 @@ export class HomecoachComponent implements AfterViewInit {
     }
   }
 
-  seeSessions(idAtleta:number){
+  seeSessions(idAtleta:number, tipo:number){
     console.log("Si apacha el boton")
-    this.router.navigate(["coach/sessions", idAtleta]);
+    this.router.navigate(["coach/sessions", idAtleta, tipo]);
   }
 
   showSnackBar(message: string) {

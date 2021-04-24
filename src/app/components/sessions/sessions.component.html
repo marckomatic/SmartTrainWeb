@@ -9,11 +9,11 @@
       <br> <b>Peso:</b> {{infoUsuario.peso}} kg
       <br> <b>Altura:</b> {{infoUsuario.estatura}} cm
       <br> <b>Sexo:</b> {{infoUsuario.sexo}} <br> 
-      <br> <b>Fecha:</b> {{today | date:'mediumTime'}}
+      <br> <b>Hora Actual:</b> {{today | date:'mediumTime'}}
     </p>
   </div>
   <div>
-    <img [src]="imageUrl" height="219px" />
+    <img [src]="imageUrl" id="titleImage" />
   </div>
 
 </mat-card>

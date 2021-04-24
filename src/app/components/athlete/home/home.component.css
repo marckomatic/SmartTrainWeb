@@ -132,11 +132,12 @@
 
 @media screen and (max-width: 700px) {
   .widget {
-    width: 95%;
+    flex-basis: 80%;
     margin-bottom: 8px;
   }
   .section {
     min-height: 250px;
+    justify-content: center;
   }
 
   .section2{
